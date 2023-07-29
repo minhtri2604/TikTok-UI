@@ -1,0 +1,225 @@
+.wrapper {
+  height: var(--default-layout-header);
+  --default-search-height: 46px;
+  --default-search-spacer: 9px;
+  padding-left: 16px;
+  padding-right: 24px;
+  box-shadow: 0px 1px 1px rgba(22, 24, 35, 0.12);
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: var(--white);
+}
+.inner {
+  display: flex;
+  height: var(--default-layout-header);
+  justify-content: space-between;
+  align-items: center;
+}
+.search,
+.search-result {
+  width: 500px;
+}
+.search {
+  display: flex;
+  height: var(--default-search-height);
+  background-color: rgba(22, 24, 35, 0.12);
+  border-radius: 92px;
+  padding: 0 0 0 16px;
+  font-size: 1.6rem;
+  border: 1px solid transparent;
+  position: relative;
+
+  &:focus-within {
+    border-color: rgba(22, 24, 35, 0.2);
+    .search-btn {
+      background-color: rgba(22, 24, 35, 0.03);
+      cursor: pointer;
+    }
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    width: 1px;
+    top: var(--default-search-spacer);
+    height: calc(
+      var(--default-search-height) - var(--default-search-spacer) * 2
+    );
+    right: 52px;
+    background-color: rgba(22, 24, 35, 0.12);
+  }
+
+  input {
+    height: 21px;
+    padding-right: 40px !important;
+    color: var(--black);
+    height: 100%;
+    flex: 1;
+    padding: 12px 0;
+    background-color: transparent;
+    caret-color: var(--primary);
+    input{
+      padding-right: 40px;
+    }
+  }
+  input:not(:placeholder-shown) ~ .search-btn {
+    color: rgba(22, 24, 35, 0.75);
+  }
+
+  .search-btn {
+    width: 52px;
+    border: none;
+    background-color: transparent;
+    border-top-right-radius: 92px;
+    border-bottom-right-radius: 92px;
+    font-size: 1.8rem;
+    color: rgba(22, 24, 35, 0.34);
+  }
+}
+
+.clear,
+.loading {
+  position: absolute;
+  right: 52px;
+  border: none;
+  font-size: 1.6rem;
+  background-color: transparent;
+  color:rgba(22,24,35,0.34);
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 8px;
+}
+.loading{
+
+  animation:loading 1s linear infinite ;
+}
+
+@keyframes loading{
+  from{
+    transform: translateY(-50%) rotate(0);
+  }
+  to{
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+
+
+.search-btn {
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+    cursor: pointer;
+    color: rgba(22, 24, 35, 0.75);
+  }
+}
+
+.search-result {
+  .account {
+    height: 30px;
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.093px;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
+  }
+}
+
+// Actions
+
+.actions {
+  display: flex;
+  justify-content: center;
+
+  .upload {
+    width: 110px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+  }
+  button {
+    background-color: transparent;
+  }
+
+  .icon-message {
+    margin: 0 16px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .icon-mailbox {
+    position: relative;
+    .mailbox-quantity {
+      position: absolute;
+      width: 24px;
+      height: 20px;
+      top: -8px;
+      right: -2px;
+      padding: 3px;
+      color: var(--white);
+      background-color: var(--primary);
+      border-radius: 50%;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    margin-left: 24px;
+    border-radius: 50%;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.upload {
+  .icon-plus {
+    margin-right: 8px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}
+
+// No user
+
+.login {
+  width: 100px;
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 16px;
+  span {
+    padding: 6px 16px;
+  }
+  &:hover {
+    cursor: pointer;
+    color: var(--white);
+    background-color: #f73c61;
+  }
+}
+.vertical {
+  font-size: 2rem;
+  .icon-vertical {
+    padding: 6px;
+  }
+}
+
+// Menu
+
+.menu-list {
+  margin-top: -6px;
+  width: 224px;
+}

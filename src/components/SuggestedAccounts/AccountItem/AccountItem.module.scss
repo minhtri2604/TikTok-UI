@@ -1,0 +1,72 @@
+.wrapper {
+  width: 224px;
+  padding: 8px 16px;
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.avatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.btn-follow {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0 20px;
+  border-radius: 4px;
+  &:hover {
+    cursor: pointer;
+    background-color: #f73c61;
+  }
+}
+
+.infor {
+  color: rgb(22, 24, 35);
+  font-size: 1.4rem;
+  margin: 16px 0 8px 0;
+  .nickname {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.03px;
+    margin-top: -2px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .icon-check {
+    margin-left: 0.6rem;
+    font-size: 1.2rem;
+    color: rgb(32, 213, 236);
+  }
+  .name {
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.161px;
+    line-height: 15px;
+    max-width: 145px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.follow-like {
+  display: flex;
+  font-size: 1.4rem;
+
+
+  .follow {
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 400;
+    margin-right: 10px;
+  }
+  .quantity{
+    color: rgb(22, 24, 35);
+
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,16 @@
+.wrapper {
+  width: 224px;
+  height: 100%;
+  padding: 20px 0 26px 8px;
+  &:hover {
+    overflow-y: auto;
+  }
+}
+.button-account {
+  background-color: transparent;
+}
+.see-more {
+  padding: 12px 12px 4px 12px;
+  font-size: 1.4rem;
+  color: var(--primary);
+}

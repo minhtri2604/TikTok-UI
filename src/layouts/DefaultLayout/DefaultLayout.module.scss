@@ -1,0 +1,19 @@
+.light{
+  background-color: var(--white);
+  
+}
+.dark{
+  background-color: black;
+
+}
+.container {
+  display: flex;
+  padding-top:var(--default-layout-header) ;
+}
+.content {
+  flex: 1;
+  scroll-snap-type: y mandatory;
+  height: 100%;
+  
+}
+
